@@ -3,7 +3,8 @@ const productos = [{
     nombre: 'Gorra ',
     descripcion: 'LEt cillum elit aliqua commodo tempor enim eiusmod.o',
     stock: '10',
-    imagen: './images/gorra1.jpg'
+    imagen: './images/gorra1.jpg',
+    category:'plana'
 
 
 },{
@@ -11,14 +12,15 @@ const productos = [{
     nombre: 'Gorra-2 ',
     descripcion: 'LEt cillum elit aliqua commodo tempor enim eiusmod.o',
     stock: '10',
-    imagen: './images/gorra2.jpg'
+    imagen: './images/gorra2.jpg',
+    category:'curva'
  
 }]
 export const getProductos = () => {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(productos)
-        }, 2000)
+        }, 1000)
     })
 }
 
@@ -30,8 +32,13 @@ export const getProductosBycategory=(categoryId)=>{
     })
 }
 
-// getProductos().then(response => {
-//   console.log(response)
-// })
 
-export const getProductosById=()=>{}
+export const getProductosById=(id)=>{
+    return new Promise(resolve=>{
+        setTimeout(()=>{
+            resolve(productos.find(prod=>{
+                return prod.id===id
+            }))
+        },500)
+    })
+}

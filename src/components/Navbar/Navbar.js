@@ -28,10 +28,6 @@ function CollapsNav(props) {
             <Link className="link" to='/'  >Ver todo</Link>
             <Link to='/category/planas'  >Gorras-planas</Link>
             <Link to='/category/curvas'  >Gorras-curvas</Link>
-            
-          {/* <BotonNav textoNav="Cap" func={handleOnClick} />
-          <BotonNav textoNav="Gorras" />
-          <BotonNav textoNav="Contacto" /> */}
            
           </Nav>
           <Nav>
