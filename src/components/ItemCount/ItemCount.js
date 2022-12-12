@@ -15,7 +15,7 @@ const ItemCount = ({ stock, onAdd }) => {
   };
   return (
     <div>
-      <p>0</p>
+      <p>{count}</p>
       <button onClick={sumar}>+</button>
       <button onClick={restar}>-</button>
       <button onClick={() => onAdd(count)} disabled={!count}>

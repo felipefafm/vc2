@@ -26,11 +26,11 @@ export const getProducts = () => {
     })
 }
 
-export const getProductById=(id)=>{
+export const getProductById=(productId)=>{
     return new Promise(resolve=>{
         setTimeout(()=>{
             resolve(products.find(prod=>{
-                return prod.id === id
+                return prod.id === parseInt(productId)
             }))
         },500)
     })
