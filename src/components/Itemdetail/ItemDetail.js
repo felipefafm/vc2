@@ -12,7 +12,7 @@ const ItemDetail = ({ productos, stock }) => {
       <p>{productos.descripcion}</p>
       <h3>Stock</h3>
       <p>{productos.stock}</p>
-      <p>{productos.imagen}</p>
+      <img src={productos.imagen} alt ={productos.nombre}/>
       <h3>{stock > 0 && <ItemCount stock={stock} onAdd={handleOnAdd} />}</h3>
     </div>
   );

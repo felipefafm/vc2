@@ -2,9 +2,8 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-// import NavDropdown from 'react-bootstrap/NavDropdown';
 import CartWidget from '../CartWidget/CartWidget';
-// import Alert from 'react-bootstrap/Alert'
+
 import{Link} from 'react-router-dom';
 import "./Navbar.js"
 
@@ -26,8 +25,8 @@ function CollapsNav(props) {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <Link className="link" to='/'  >Ver todo</Link>
-            <Link to='/category/planas'  >Gorras-planas</Link>
-            <Link to='/category/curvas'  >Gorras-curvas</Link>
+            <Link to='/category/plana'  >Gorras-planas</Link>
+            <Link to='/category/curva'  >Gorras-curvas</Link>
            
           </Nav>
           <Nav>
