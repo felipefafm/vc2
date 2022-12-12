@@ -1,37 +1,45 @@
-const productos = [{
+const products = [{
     id: '1',
-    nombre: 'Gorra ',
-    descripcion: 'LEt cillum elit aliqua commodo tempor enim eiusmod.o',
+    name: 'Gorra ',
+    description: 'LEt cillum elit aliqua commodo tempor enim eiusmod.o',
     stock: '10',
-    imagen: './images/gorra1.jpg'
+    img: './images/gorra1.jpg',
+    category:'plana',
+    price: "1200"
 
 
 },{
     id: '2',
-    nombre: 'Gorra-2 ',
-    descripcion: 'LEt cillum elit aliqua commodo tempor enim eiusmod.o',
+    name: 'Gorra-2 ',
+    description: 'LEt cillum elit aliqua commodo tempor enim eiusmod.o',
     stock: '10',
-    imagen: './images/gorra2.jpg'
+    img: './images/gorra2.jpg',
+    category:'curva',
+    price:"3500"
  
 }]
-export const getProductos = () => {
+export const getProducts = () => {
     return new Promise((resolve) => {
         setTimeout(() => {
-            resolve(productos)
-        }, 2000)
+            resolve(products)
+        }, 500)
     })
 }
 
-export const getProductosBycategory=(categoryId)=>{
+export const getProductById=(productId)=>{
     return new Promise(resolve=>{
         setTimeout(()=>{
-            resolve(productos.filter(prod=>prod.category===categoryId))
+            resolve(products.find(prod=>{
+                return prod.id === parseInt(productId)
+            }))
         },500)
     })
 }
 
-// getProductos().then(response => {
-//   console.log(response)
-// })
-
-export const getProductosById=()=>{}
+export const getProductsBycategory=(categoryId)=>{
+    return new Promise(resolve=>{
+        setTimeout(()=>{
+            resolve(products.filter(prod => prod.category === categoryId))
+        },500)
+    })
+}

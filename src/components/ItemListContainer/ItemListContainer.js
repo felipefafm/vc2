@@ -1,25 +1,25 @@
 import { useEffect, useState } from "react";
-import { getProductos, getProductosBycategory } from "../../asynMock";
+import { getProducts, getProductsBycategory } from "../../asynMock";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 
 const ItemListContainer = () => {
-  const [productos, setProductos] = useState([]);
+  const [products, setProducts] = useState([]);
 
   const { categoryId } = useParams();
   useEffect(() => {
     if (categoryId) {
-      getProductosBycategory(categoryId)
+      getProductsBycategory(categoryId)
         .then((response) => {
-          setProductos(response);
+          setProducts(response);
         })
         .catch((error) => {
           console.log(error);
         });
     } else {
-      getProductos(categoryId)
+      getProducts(categoryId)
         .then((response) => {
-          setProductos(response);
+          setProducts(response);
         })
         .catch((error) => {
           console.log(error);
@@ -30,7 +30,7 @@ const ItemListContainer = () => {
   return (
     <div>
       <h1>Listado de productos</h1>
-      <ItemList productos={productos} />
+      <ItemList products={products} />
     </div>
   );
 };

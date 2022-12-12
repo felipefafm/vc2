@@ -8,15 +8,20 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <CollapsNav />
-      <div>
-        <Routes>
-          <Route path="/" element={<ItemListContainer />} />
-          <Route path="/category/:categoryId" element={<ItemListContainer />}/>
-          <Route path="/detail/:producostId" element={<ItemDetailContainer />} />
-        </Routes>
-
-      </div>
+        <CollapsNav />
+        <div>
+          <Routes>
+            <Route path="/" element={<ItemListContainer />} />
+            <Route
+              path="/category/:categoryId"
+              element={<ItemListContainer /> }
+            />
+            <Route
+              path="/detail/:productId"
+              element={<ItemDetailContainer />}
+            />
+          </Routes>
+        </div>
       </BrowserRouter>
     </div>
   );
