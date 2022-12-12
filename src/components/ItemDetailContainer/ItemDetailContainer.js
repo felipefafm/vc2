@@ -16,9 +16,9 @@ const ItemDetailContainer = () => {
       .then((response) => {
         setProduct(response);
       })
-      .cath((error) => {
-        console.log(error);
-      });
+      // .cath((error) => {
+      //   console.log(error);
+      // });
   }, [productId]);
 // console.log(productId)
   return (

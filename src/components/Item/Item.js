@@ -8,7 +8,7 @@ const Item = ({ product }) => {
       <h3>{product.description}</h3>
       <p>{product.category}</p>
       <p>{product.stock}</p>
-      <Link to={`/detail/ ${product.id}`}>Ver Detalle</Link>
+      <Link to={`/detail/${product.id}`}>Ver Detalle</Link>
      
     </div>
   );
