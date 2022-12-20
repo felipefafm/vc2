@@ -25,11 +25,9 @@ const ItemDetailContainer = () => {
       .finally(() => {
         setLoading(false);
       });
-    // .cath((error) => {
-    //   console.log(error);
-    // });
+    
   }, [productId]);
-  // console.log(productId)
+  
   if (loading) {
     return <h1>Cargando...</h1>;
   }
