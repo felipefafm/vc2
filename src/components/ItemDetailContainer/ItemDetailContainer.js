@@ -1,31 +1,42 @@
-
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getProductById } from "../../asynMock";
+// import { getProductById } from "../../asynMock";
+import { getDoc, doc } from "firebase/firestore";
+import { db } from "../../services/firebase/firebaseConfig";
 import ItemDetail from "../Itemdetail/ItemDetail";
 
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState({});
-  const { productId } = useParams();
- 
+  const [loading, setLoading] = useState(true);
 
+  const { productId } = useParams();
 
   useEffect(() => {
-    getProductById(productId)
+    const productRef = doc(db, "products", productId);
+    getDoc(productRef)
       .then((response) => {
-        setProduct(response);
+        const data = response.data();
+        const productAdapted = { id: response.id, ...data };
+        setProduct(productAdapted);
       })
-      // .cath((error) => {
-      //   console.log(error);
-      // });
+      .catch((error) => {
+        console.log(error);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+    // .cath((error) => {
+    //   console.log(error);
+    // });
   }, [productId]);
-// console.log(productId)
+  // console.log(productId)
+  if (loading) {
+    return <h1>Cargando...</h1>;
+  }
   return (
     <div>
-  
       <h1>Detalle del producto</h1>
       <ItemDetail {...product} />
-      
     </div>
   );
 };

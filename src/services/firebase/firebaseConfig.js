@@ -1,7 +1,5 @@
 import { initializeApp } from "firebase/app";
-import{ getFirestore } from "firebase/firestore"
-
-
+import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -10,9 +8,9 @@ const firebaseConfig = {
   projectId: "vc2pro",
   storageBucket: "vc2pro.appspot.com",
   messagingSenderId: "35671718149",
-  appId: "1:35671718149:web:76ff19a346f7d32e089f6c"
+  appId: "1:35671718149:web:76ff19a346f7d32e089f6c",
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-export const db = getFirestore(app)
+export const db = getFirestore(app);
