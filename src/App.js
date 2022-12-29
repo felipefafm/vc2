@@ -7,6 +7,7 @@ import CollapsNav from "./components/Navbar/Navbar";
 import { useEffect,useState } from "react";
 import { ClipLoader } from "react-spinners";
 import Cart from "./components/Cart/Cart";
+import Checkout from "./components/Checkout/Checkout";
 
 function App() {
   const[loading, setLoading]=useState(false)
@@ -36,6 +37,14 @@ function App() {
             <Route
               path="/detail/:productId"
               element={<ItemDetailContainer />}
+            />
+            <Route
+              path="/cart"
+              element={<Cart />}
+            />
+            <Route
+              path="/Checkout"
+              element={<Checkout />}
             />
             <Route
               path="/cart"

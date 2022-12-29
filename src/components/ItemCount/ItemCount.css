@@ -1,0 +1,29 @@
+.divItemCount{
+    padding-bottom: 5%;
+    position: relative;
+    background-color: black;
+    color:aliceblue;
+    margin-left: 25%;
+    margin-right: 25%;
+    border-radius: 2%;
+    
+}
+.divButton{
+    position: relative;
+    justify-content: center;
+    display: block;
+}
+.bs{
+   color: white;
+   background-color: black;
+    
+}
+.br{
+    color: white;
+    background-color: black;
+    
+}
+.badd{
+    color:  white;
+    background-color: black;
+}

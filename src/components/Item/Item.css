@@ -1,0 +1,46 @@
+.divItemcart{
+    background-color: azure;
+    margin: 10px 10px 50px 50px;
+    border-radius: 1%;
+    border-top:solid ;
+    border-right:solid ;
+    border-left-style:solid ;
+    border-bottom:solid ;
+    justify-content: center;
+    padding: 50px;
+    border-color: darkgrey;
+    display: inline-block;
+    box-shadow:10px 10px #111110;
+    width: auto;
+    height: auto;
+}
+.seedetail {
+    background-color: #111110;
+  color: rgb(110, 109, 109);
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.seedetail:hover, .seedetail:active {
+  background-color: red;
+
+}
+
+ .ImgItem{
+    border-top: #111110 solid;
+    border-right: #111110 solid;
+    border-left: #111110 solid;
+    border-bottom: #111110 solid;
+    align-items: center;
+    width: 200px;
+   height: 200px;
+ }
+ .divCont{
+  background-color: white;
+  border-radius: 1%;
+  padding-top: 15px;
+  height: 495px;
+  width: 350px;
+ }
