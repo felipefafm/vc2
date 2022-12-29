@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom'
 import Form from '../Form/Form'
 
 const Checkout = () => {
-    const { cart, getTotal, clearCart } = useContext(CartContext)
+    const { cart, getTotal,  } = useContext(CartContext)
     const [loading, setLoading] = useState(false)
 
     const navigate = useNavigate()
@@ -22,6 +22,7 @@ const Checkout = () => {
                     name: 'felipe',
                     email: 'felipe@gmail.com',
                     phone: '2313545'
+                    
                 },
                 items: cart,
                 total: getTotal()
@@ -59,7 +60,7 @@ const Checkout = () => {
     
                 const orderAdded = await addDoc(orderRef, objOrder)
     
-                clearCart()
+                // clearCart()
 
                 setTimeout(() => {
                     navigate('/')
