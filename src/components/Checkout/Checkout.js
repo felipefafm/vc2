@@ -21,7 +21,8 @@ const Checkout = () => {
                 buyer: {
                     name: 'felipe',
                     email: 'felipe@gmail.com',
-                    phone: '2313545'
+                    phone: '2313545',
+                    adress: 'roca 300'
                     
                 },
                 items: cart,
