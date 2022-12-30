@@ -5,11 +5,15 @@ import { collection, getDocs, query, where, documentId, writeBatch, addDoc } fro
 import { db } from '../../services/firebase/firebaseConfig'
 
 import { useNavigate } from 'react-router-dom'
-import Form from '../Form/Form'
+import { Link } from 'react-router-dom'
 
 const Checkout = () => {
     const { cart, getTotal,  } = useContext(CartContext)
     const [loading, setLoading] = useState(false)
+    const [name,setName]=useState()
+    const [phone,setPhone]=useState()
+    const [adress,setAdress]=useState()
+    const [email,setEmail]=useState()
 
     const navigate = useNavigate()
 
@@ -19,10 +23,10 @@ const Checkout = () => {
         try {
             const objOrder = {
                 buyer: {
-                    name: 'felipe',
-                    email: 'felipe@gmail.com',
-                    phone: '2313545',
-                    adress: 'roca 300'
+                    name: name,
+                    email: email,
+                    phone: phone,
+                    adress: adress
                     
                 },
                 items: cart,
@@ -82,12 +86,51 @@ const Checkout = () => {
     if(loading) {
         return <h1>Generando Orden...</h1>
     }
+    const handleSubmit = (e) => {
+		e.preventDefault();
+		handleCreateOrder();
+	};
 
     return (
         <div>
             <h1>Checkout</h1>
-            <Form />
-            <button onClick={handleCreateOrder}>Confirmar orden</button>
+          
+            <main>  
+      <div>
+			
+			<div>
+				<form onSubmit={handleSubmit}>
+					Ingresá tu nombre
+					<input
+						type="text"
+						value={name}
+						onChange={(e) => setName(e.target.value)}
+					/>
+					Ingresá tu e-mail
+					<input
+						type="text"
+						value={email}
+						onChange={(e) => setEmail(e.target.value)}
+					/>
+					Ingresá tu teléfono
+					<input
+						type="number"
+						value={phone}
+						onChange={(e) => setPhone(e.target.value)}
+					/>
+          <input
+          type="text"
+          value={adress}
+          onChange={(e) => setAdress(e.target.value)}
+           />
+					<button type="submit">Confirmar Orden</button>
+				</form>
+			</div>
+
+			<Link to={"/"}>Volver a Home</Link>
+		</div>
+            </main>
+            {/* <button onClick={handleCreateOrder}>Confirmar orden</button> */}
         </div>
     )
 }
