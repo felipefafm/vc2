@@ -6,7 +6,7 @@ import { db } from '../../services/firebase/firebaseConfig'
 
 import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
-
+import "./checkout.css"
 const Checkout = () => {
     const { cart, getTotal,  } = useContext(CartContext)
     const [loading, setLoading] = useState(false)
@@ -98,32 +98,42 @@ const Checkout = () => {
             <main>  
       <div>
 			
-			<div>
+			<div className='form'>
 				<form onSubmit={handleSubmit}>
-					Ingresá tu nombre
+					<div>
+                        Ingresá tu nombre:
+                        </div>
 					<input
 						type="text"
 						value={name}
 						onChange={(e) => setName(e.target.value)}
 					/>
-					Ingresá tu e-mail
+                    <div>
+					Ingresá tu e-mail:
+                    </div>
 					<input
 						type="text"
 						value={email}
 						onChange={(e) => setEmail(e.target.value)}
 					/>
-					Ingresá tu teléfono
+                    <div>
+					Ingresá tu teléfono:
+                    </div>
 					<input
 						type="number"
 						value={phone}
 						onChange={(e) => setPhone(e.target.value)}
 					/>
-          <input
-          type="text"
-          value={adress}
-          onChange={(e) => setAdress(e.target.value)}
-           />
-					<button type="submit">Confirmar Orden</button>
+                    <div>
+                    Ingresa tu Direccion:
+                     </div>
+                    <input
+                    type="text"
+                    value={adress}
+                    onChange={(e) => setAdress(e.target.value)}
+                    />
+                    
+					<button className='boton' type="submit">Confirmar Orden</button>
 				</form>
 			</div>
 
