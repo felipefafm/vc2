@@ -1,0 +1,15 @@
+.form{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    border-radius: 5%;
+}
+.boton{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-color: black;
+    color: white;
+
+}

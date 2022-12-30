@@ -1,3 +1,44 @@
+# vc2
+## e-commerce
+
+## Routes
+- ItemListContainer "/"
+- ItemListContainer "/caegory"
+- ItemDetailContainer "/detail"
+
+## ItemListContainer "/"
+
+- Muestro todo los productos sin filtrar
+- img,price,detail,category,stock
+
+## ItemDeteailContainer "/category"
+
+- Muestro los productos filtrados por category
+- Curvas y planas
+
+## ItemDeteailContainer "/detail"
+
+- Ver el detalle de cada producto
+- Count para agregar al carrito 
+
+
+## Navbar
+- Ver todo
+- Gorras-planas
+- Gorras-curvas
+- CartWidget
+
+## Components
+- Cart
+- CartWidget
+- Item
+- ItemCount
+- ItemDetailContainer
+- ItemList
+- ItemListContainer
+- Itemdetail
+- Navbar
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

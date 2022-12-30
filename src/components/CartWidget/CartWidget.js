@@ -9,7 +9,7 @@ const CartWidget = () => {
   const totalQuantity = getQuantity()
   return (
     <Button>
-      <Link to="/cart">
+      <Link className="link" to="/cart">
       <img src={"./images/cart.svg"} alt="cart-widget" />{totalQuantity}
       </Link>
     </Button>
